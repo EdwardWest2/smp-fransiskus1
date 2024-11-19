@@ -198,15 +198,27 @@ footer p{
         border-radius: 20px;
         width: 300px;
         max-width: 300px;
-        /* margin: 5px; */
+        margin: 5px;
         margin-bottom: 10px;
+        animation: autoScrl infinite 7s ease;
     }
 
-    .cards{
+    /* .cards{
         justify-content: center;
         flex-direction: column;
         display: flex;
 
+    } */
+
+    .cards{
+        justify-content: center;
+        /* flex-direction: column; */
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 305px;
+        overflow-x: scroll;
+        
     }
     
     .card1 img{
@@ -255,4 +267,23 @@ footer p{
         font-size: 15px;
     }
 
+    @keyframes autoScrl {
+
+        
+        0%{
+            transform: translateX(305px);
+        }
+        15%{
+            transform: translateX(305px);
+        }
+        50%{
+            transform: translateX(0px);
+        }
+        75%{
+            transform: translateX(-305px);
+        }
+        100%{
+            transform: translateX(305px);
+        }
+    }
 }
